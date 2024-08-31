@@ -19,6 +19,7 @@ export const identityPool = new sst.aws.CognitoIdentityPool("IdentityPool", {
   permissions: {
     authenticated: [
       {
+        effect: "Allow",
         actions: ["s3:*"],
         resources: [
           $concat(bucket.arn, "/private/${cognito-identity.amazonaws.com:sub}/*"),
