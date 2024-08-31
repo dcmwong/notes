@@ -27,6 +27,7 @@ Amplify.configure({
     region: config.s3.REGION,
     bucket: config.s3.BUCKET,
     identityPoolId: config.cognito.IDENTITY_POOL_ID,
+    userPoolId: config.cognito.USER_POOL_ID,
   },
   API: {
     endpoints: [
